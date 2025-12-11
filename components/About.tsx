@@ -7,13 +7,13 @@ interface TechItem {
 
 export function About() {
   const frontendTech: TechItem[] = [
-    { name: 'JavaScript', icon: 'javascript' },
-    { name: 'TypeScript', icon: 'typescript' },
+    { name: 'JavaScript', icon: 'JavaScript' },
+    { name: 'TypeScript', icon: 'TypeScript' },
     { name: 'React', icon: 'React' },
     { name: 'Next.js', icon: 'NextJS' },
     { name: 'Tailwind CSS', icon: 'TailwindCSS' },
     { name: 'Dart', icon: 'Dart' },
-    { name: 'HTML5', icon: 'html' },
+    { name: 'HTML5', icon: 'HTML' },
     { name: 'CSS3', icon: 'CSS' },
     { name: 'Flutter', icon: 'Flutter' },
     { name: 'Vue', icon: 'VueJS' },
@@ -26,7 +26,7 @@ export function About() {
     { name: 'Express', icon: 'ExpressJS' },
     { name: 'MongoDB', icon: 'MongoDB' },
     { name: 'PostgreSQL', icon: 'PostgreSQL' },
-    { name: 'MySQL', icon: 'MYSQL' },
+    { name: 'MySQL', icon: 'MySQL' },
   ];
 
   return (

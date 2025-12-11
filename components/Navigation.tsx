@@ -78,36 +78,38 @@ export function Navigation({ darkMode, setDarkMode }: NavigationProps) {
             </div>
 
             {/* Theme Toggle */}
-            <motion.button
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={() => setDarkMode(!darkMode)}
-              className={`p-2 rounded-full transition-all duration-300 ${
-                scrolled
-                  ? 'bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white'
-                  : 'bg-white/20 backdrop-blur-sm text-white hover:bg-white/30'
-              }`}
-            >
-              {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </motion.button>
+            <div className="flex gap-2">
+              <motion.button
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setDarkMode(!darkMode)}
+                className={`p-2 rounded-full transition-all duration-300 ${
+                  scrolled
+                    ? 'bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white'
+                    : 'bg-white/20 backdrop-blur-sm text-white hover:bg-white/30'
+                }`}
+              >
+                {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              </motion.button>
 
-            {/* Mobile Menu Toggle */}
-            <motion.button
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className={`md:hidden p-2 rounded-full transition-all duration-300 ${
-                scrolled
-                  ? 'bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white'
-                  : 'bg-white/20 backdrop-blur-sm text-white hover:bg-white/30'
-              }`}
-            >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </motion.button>
+              {/* Mobile Menu Toggle */}
+              <motion.button
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className={`md:hidden p-2 rounded-full transition-all duration-300 ${
+                  scrolled
+                    ? 'bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white'
+                    : 'bg-white/20 backdrop-blur-sm text-white hover:bg-white/30'
+                }`}
+              >
+                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              </motion.button>
+            </div>
           </div>
         </div>
       </motion.nav>

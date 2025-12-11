@@ -69,7 +69,7 @@ export function Hero() {
               View Projects
             </motion.a>
             <motion.a
-              href="/RahmatAdiSantoso_CV.pdf"
+              href="cv/RahmatAdiSantoso_CV.pdf"
               download="RahmatAdiSantoso_CV.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

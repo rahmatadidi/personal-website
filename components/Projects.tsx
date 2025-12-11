@@ -97,13 +97,12 @@ export function Projects() {
           </p>
         </motion.div>
 
-        {/* Filter Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex justify-center gap-4 mb-12"
+          className="flex gap-3 mb-12 overflow-x-auto justify-start md:justify-center px-2scrollbar-none"
         >
           {[
             { value: 'all', label: 'All Projects' },
@@ -115,7 +114,7 @@ export function Projects() {
               onClick={() => setActiveType(tab.value as ProjectType | 'all')}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`px-6 py-3 rounded-full transition-all ${
+              className={`px-5 py-2 md:px-6 md:py-3 rounded-full whitespace-nowrap transition-all ${
                 activeType === tab.value
                   ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'

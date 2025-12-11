@@ -137,9 +137,9 @@ export function Projects() {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg"
+                className="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg flex flex-col"
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-54 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -158,48 +158,54 @@ export function Projects() {
                   </div>
                 </div>
 
-                <div className="p-6">
+                <div className="p-4 flex flex-col h-1/2">
                   <h3 className="text-xl mb-2 text-gray-900 dark:text-white">{project.title}</h3>
+
                   <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
 
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                  {/* Wrap tech + buttons in 1 group */}
+                  <div className="mt-auto">
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tech.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
 
-                  <div className="flex gap-4">
-                    {project.github && (
-                      <motion.a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-                      >
-                        <FaGithub className="w-5 h-5" />
-                        Code
-                      </motion.a>
-                    )}
-                    {project.demo && (
-                      <motion.a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-                      >
-                        <ExternalLink className="w-5 h-5" />
-                        Demo
-                      </motion.a>
-                    )}
+                    {/* Buttons ALWAYS at bottom and closer */}
+                    <div className="flex gap-4">
+                      {project.github && (
+                        <motion.a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                          className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                        >
+                          <FaGithub className="w-5 h-5" />
+                          Code
+                        </motion.a>
+                      )}
+
+                      {project.demo && (
+                        <motion.a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                          className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                        >
+                          <ExternalLink className="w-5 h-5" />
+                          Demo
+                        </motion.a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </motion.div>

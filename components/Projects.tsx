@@ -102,7 +102,7 @@ export function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex gap-3 mb-12 overflow-x-auto justify-start md:justify-center px-2scrollbar-none"
+          className="flex gap-3 mb-12 overflow-x-auto justify-start md:justify-center px-2 scrollbar-none"
         >
           {[
             { value: 'all', label: 'All Projects' },

@@ -38,23 +38,25 @@ export function Navigation({ darkMode, setDarkMode }: NavigationProps) {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className={`transition-colors duration-300 ${
-              scrolled
-                ? 'text-gray-900 sm:text-lg text-sm dark:text-white flex items-center'
-                : 'text-white sm:text-lg text-sm drop-shadow-lg flex items-center'
-            }`}
-          >
-            <img
-              src="https://res.cloudinary.com/ddfdf66n7/image/upload/v1765388284/Gemini_Generated_Image_gj8p80gj8p80gj8p-removebg-preview_l3toor.png"
-              className="sm:w-18 sm:h-18 w-8 h-8"
-              alt="logo-profile"
-            />
-            Rahmat Adi Santoso - Dev
-          </motion.div>
+          <a href="/">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className={`transition-colors duration-300 ${
+                scrolled
+                  ? 'text-gray-900 sm:text-lg text-sm dark:text-white flex items-center'
+                  : 'text-white sm:text-lg text-sm drop-shadow-lg flex items-center'
+              }`}
+            >
+              <img
+                src="https://res.cloudinary.com/ddfdf66n7/image/upload/v1765388284/Gemini_Generated_Image_gj8p80gj8p80gj8p-removebg-preview_l3toor.png"
+                className="sm:w-18 sm:h-18 w-8 h-8"
+                alt="logo-profile"
+              />
+              Rahmat Adi Santoso - Dev
+            </motion.div>
+          </a>
 
           <div className="flex items-center gap-8">
             {/* Desktop Menu */}

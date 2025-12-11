@@ -76,12 +76,15 @@ export function About() {
         >
           <h2 className="text-4xl mb-6 text-gray-900 dark:text-white">About Me</h2>
           <p className="text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-4">
-            I'm a passionate full-stack developer with expertise in modern web technologies. I love
-            building scalable applications and learning new technologies to solve complex problems.
+            I'm a full-stack developer who enjoys building modern, clean, and efficient web
+            applications. I focus on creating smooth user experiences using technologies like React,
+            Next.js, and Tailwind CSS.
           </p>
+
           <p className="text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-            With a strong foundation in both frontend and backend development, I create seamless
-            user experiences backed by robust server-side solutions.
+            On the backend, I work with Node.js, Nest.js, and relational databases such as MySQL and
+            PostgreSQL to build clear, maintainable, and scalable API structures. I love learning
+            new tools and continuously improving the way I design and develop applications.
           </p>
         </motion.div>
 

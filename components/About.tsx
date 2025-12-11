@@ -9,23 +9,24 @@ export function About() {
   const frontendTech: TechItem[] = [
     { name: 'JavaScript', icon: 'javascript' },
     { name: 'TypeScript', icon: 'typescript' },
-    { name: 'React', icon: 'react' },
-    { name: 'Next.js', icon: 'nextjs' },
-    { name: 'Tailwind CSS', icon: 'tailwindcss' },
-    { name: 'Dart', icon: 'dart' },
+    { name: 'React', icon: 'React' },
+    { name: 'Next.js', icon: 'NextJS' },
+    { name: 'Tailwind CSS', icon: 'TailwindCSS' },
+    { name: 'Dart', icon: 'Dart' },
     { name: 'HTML5', icon: 'html' },
-    { name: 'CSS3', icon: 'css' },
-    { name: 'Flutter', icon: 'flutter' },
+    { name: 'CSS3', icon: 'CSS' },
+    { name: 'Flutter', icon: 'Flutter' },
+    { name: 'Vue', icon: 'VueJS' },
   ];
 
   const backendTech: TechItem[] = [
-    { name: 'Node.js', icon: 'nodejs' },
-    { name: 'Nest.js', icon: 'nestjs' },
-    { name: 'PHP', icon: 'php' },
-    { name: 'Express', icon: 'express' },
-    { name: 'MongoDB', icon: 'mongodb' },
-    { name: 'PostgreSQL', icon: 'postgresql' },
-    { name: 'MySQL', icon: 'mysql' },
+    { name: 'Node.js', icon: 'NodeJS' },
+    { name: 'Nest.js', icon: 'NestJS' },
+    { name: 'PHP', icon: 'PHP' },
+    { name: 'Express', icon: 'ExpressJS' },
+    { name: 'MongoDB', icon: 'MongoDB' },
+    { name: 'PostgreSQL', icon: 'PostgreSQL' },
+    { name: 'MySQL', icon: 'MYSQL' },
   ];
 
   return (
@@ -110,10 +111,11 @@ export function About() {
                 >
                   <div className="flex items-center gap-2 px-4 py-2.5 bg-linear-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg border-2 border-blue-200 dark:border-blue-800 group-hover:border-blue-400 dark:group-hover:border-blue-600 group-hover:shadow-md transition-all">
                     <img
-                      src={`https://skillicons.dev/icons?i=${tech.icon}`}
+                      src={`/icons/${tech.icon}.svg`}
                       alt={tech.name}
                       className="w-5 h-5 object-contain opacity-80"
                     />
+
                     <span className="text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       {tech.name}
                     </span>
@@ -147,7 +149,7 @@ export function About() {
                 >
                   <div className="flex items-center gap-2 px-4 py-2.5 bg-linear-to-r from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20 rounded-lg border-2 border-green-200 dark:border-green-800 group-hover:border-green-400 dark:group-hover:border-green-600 group-hover:shadow-md transition-all">
                     <img
-                      src={`https://skillicons.dev/icons?i=${tech.icon}`}
+                      src={`/icons/${tech.icon}.svg`}
                       alt={tech.name}
                       className="w-5 h-5 object-contain opacity-80"
                     />

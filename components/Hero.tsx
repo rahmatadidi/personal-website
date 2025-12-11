@@ -55,25 +55,28 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="flex gap-4 justify-center"
+            className="flex flex-wrap gap-3 justify-center"
           >
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors flex items-center gap-2"
-            >
-              Download CV
-              <MdOutlineFileDownload className="w-5 h-5" />
-            </motion.a>
+            {/* Download CV */}
 
+            {/* View Projects */}
             <motion.a
               href="#projects"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 rounded-full hover:bg-blue-600 hover:text-white dark:hover:text-white transition-colors"
+              className="px-5 py-2 sm:px-8 sm:py-3 text-sm sm:text-base border-2 border-blue-600 text-blue-600 dark:text-blue-400 rounded-full hover:bg-blue-600 hover:text-white dark:hover:text-white transition-colors"
             >
               View Projects
+            </motion.a>
+            <motion.a
+              href="/RahmatAdiSantoso_CV.pdf"
+              download="RahmatAdiSantoso_CV.pdf"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-5 py-2 sm:px-8 sm:py-3 text-sm sm:text-base bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors flex items-center gap-2"
+            >
+              Download CV
+              <MdOutlineFileDownload className="w-5 h-5" />
             </motion.a>
           </motion.div>
 

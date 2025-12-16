@@ -61,7 +61,7 @@ export function Navigation({ darkMode, setDarkMode }: NavigationProps) {
           <div className="flex items-center gap-8">
             {/* Desktop Menu */}
             <div className="hidden md:flex gap-6">
-              {['Home', 'About', 'Projects', 'Contact'].map((item, index) => (
+              {['Home', 'About', 'Projects', 'Content', 'Contact'].map((item, index) => (
                 <motion.a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -70,8 +70,8 @@ export function Navigation({ darkMode, setDarkMode }: NavigationProps) {
                   transition={{ delay: 0.1 * index }}
                   className={`transition-colors duration-300 ${
                     scrolled
-                      ? 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
-                      : 'text-white/90 hover:text-white drop-shadow-lg'
+                      ? 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-blue-600'
+                      : 'text-white/90 hover:text-blue-600 drop-shadow-lg'
                   }`}
                 >
                   {item}

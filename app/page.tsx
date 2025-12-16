@@ -1,12 +1,12 @@
-"use client"
+'use client';
 import { About } from '@/components/About';
 import { BackToTop } from '@/components/BackTop';
 import { Contact } from '@/components/Contact';
 import { Hero } from '@/components/Hero';
 import { Navigation } from '@/components/Navigation';
 import { Projects } from '@/components/Projects';
+import TikTokSection from '@/components/TiktokSection';
 import { useState, useEffect } from 'react';
-
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -25,8 +25,9 @@ function App() {
       <Hero />
       <About />
       <Projects />
+      <TikTokSection />
       <Contact />
-      <BackToTop/>
+      <BackToTop />
     </div>
   );
 }
